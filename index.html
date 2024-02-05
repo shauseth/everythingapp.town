@@ -1,15 +1,29 @@
 <!DOCTYPE html>
-<html>
-    <style>
-        body {
-            text-align: center;
-        }
-    </style>
-    <head>
-        <title>&#128230</title>
-    </head>
-    <body>
-        <span style='font-size:80px;'>&#128230;</span>
-        <p>testflight this feb</p>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>&#128230</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <p class="icon">&#128230;</p>
+
+        <h3>What's this?</h3>
+        <p>A few weeks ago I had the idea of using language models to connect people. It sounded kinda stupid and simple yet it was something I hadn’t seen around. Most use cases we see today are as assistants or romantic partners but there’s got to be more to these things goddammit. I think we got so carried away trying to humanize them that we forgot we can use them as tools to improve basic things we already do. The capabilities of these models have improved really fast yet LinkedIn still can’t understand from my resume what kind of jobs I’m looking for and Bumble still makes you mindlessly swipe through every person in the city. This felt really outdated to me so I began poking around.</p>
+        <p>We currently solve the problem of connecting people with dumb algorithms like keyword matching, recommendation systems, similarity search and exhaustively showing you a list a people in your area. But people are much bigger than anything these algorithms can capture. Luckily we already have a system that can more or less understand who you are if you simply talk to it. It may not be great at math, or be able to invent new things, or give you the right answer every time but none of that is needed for looking at the background and interests of two people and saying “I think you two should meet”.</p>
+        <p>Once I had this realization, well, I sat on it for a while. Then one day I said “screw it” and went to OpenAI playgrounds. I wrote down a made up list of profiles of people talking about who they are and what they’re looking for. Then I gave it the following prompt: “I’m looking for an empty cardboard box”. After a small uneventful pause it finally responded, “This person might have an empty cardboard box because they recently quit their job.” First of all that’s hilarious. Second of all HOLY SHIT. This is a system that can find what you’re looking for even though there’s no direct information about its existence. This is not something your keyword matching algorithm can pull off. The possibilities of such a platform were endless.</p>
+        <p>From this point on I knew someone had to build it and it would completely change the way people look for jobs, relationships, new hires for their startup or just a spare cardboard box. Before I knew it I was knee deep in Swift documentation learning about concurrency and error handling and what a cloud function is and the juggling act of sending a push notification. Four weeks later I had a TestFlight approval from Apple. I haven’t really stopped to think what I’m doing. I just got obsessed with a problem and had to chase it down. I don’t have the resources or the expertise to actually create the kind of platform I have described but we can still have a goofy and modest version of it that can hopefully deliver more than it promises. That is the story behind Ordinary App.</p>
+
+        <h3>What can it do as of now?</h3>
+        <p>It asks you for a description about yourself and it looks through a list of other people (who have also written a description about themselves) and picks one person from the list it thinks you should reach out to. You can send them a friend request, contact them on whatever link they provide and you can climb the leaderboards of matching. There’s even a secret description that only GPT can see and isn’t displayed on your profile. GPT is bad at keeping secrets though because it sometimes reveals it to the other person during a match. Lastly there’s a love mode for Valentine’s day.</p>
+        
+        <h3>How does it work?</h3>
+        <p>It sticks more than a dozen descriptions in the context window of GPT 3.5 along with your description and asks it to pick one person. This insures that once there are enough people, you don’t end up seeing the same person repeatedly and also makes sure that the OpenAI bill grows linearly with number of users. Also forces GPT to come up with interesting reasons for why it picked someone out of the other options. Using it kinda feels like prompting your way to people.</p>
+        
+        <h3>How can I use it?</h3>
+        <p>I’m gradually rolling out the TestFlight. Still very early days so except a very buggy journey. There’s no forget password options or customer support (literally DM me for anything). I knew nothing about app development a few weeks ago so bear with me. Keep an eye on <a href="https://twitter.com/shauseth" target="_blank">@shauseth</a> and <a href="https://twitter.com/ordinaryapp_" target="_blank">@ordinaryapp_</a> for updates.</p>
+    </div>
+</body>
 </html>

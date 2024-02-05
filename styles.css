@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    font-family: Verdana, sans-serif;
+}
+
+.icon {
+    margin: 0;
+    text-align: center;
+    font-size:80px;
+    padding: 20px;
+}
+
+.container {
+    font-size:15px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        max-width: 100%;
+    }
+}
